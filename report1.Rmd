@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 A shortcut to add a new r chunk is 
 
 - on a Mac: cmd-opt-i
-- on a PC: 
+- on a PC: ctrl-alt-i
 
 # To Do
 
@@ -48,22 +48,22 @@ x = rnorm(100)
 hist(x)
 ```
 
-6. Look at the chunk options below. The go after the chunk name and a comma. What does changing fig.height= something else do?
+6. Look at the chunk options below. Chunk options go after the chunk name and a comma. What does changing fig.height= something else do?
 
 ```{r smallfig, fig.height=2}
 x = rnorm(100)
 hist(x)
 ```
 
-7. Add a chunk option of echo=FALSE and see what happens. Note that the global option was set in the first setup chunk to have echo=TRUE.
+7. Add the chunk option echo=FALSE to the chunk below and see what happens. Note that the global option was set in the first setup chunk to have echo=TRUE.
 
-```{r, echo=TRUE}
+```{r}
 x = rnorm(100)
 hist(x)
 ```
 
 8. Uncomment this code and recompile the document. Then add a chunk command cache=TRUE and recompile. What files are created? Try compiling one more time. 
 
-```{r longtime, cache=TRUE}
+```{r longtime}
 #Sys.sleep(10)
 ```
