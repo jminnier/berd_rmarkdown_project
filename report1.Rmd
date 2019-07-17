@@ -67,3 +67,5 @@ hist(x)
 ```{r longtime}
 #Sys.sleep(10)
 ```
+
+9. Add your own code chunk and print the length of `x`.
