@@ -1,0 +1,35 @@
+---
+title: "Gapminder Report"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(gapminder)
+library(naniar)
+library(tidyverse)
+```
+
+# Background
+
+## Summary
+
+This is an analysis of the gapminder data set with `r nrow(gapminder)` observations.
+
+```{r datasummary}
+summary(gapminder)
+```
+
+# Analysis
+
+## GDP vs Life Expectancy
+
+```{r}
+ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, color = continent)) +
+  geom_point()
+```
+
