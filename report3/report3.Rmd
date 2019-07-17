@@ -1,0 +1,54 @@
+---
+title: 'Example: Files in subfolder from main .Rproj folder'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.path = "report3-figs/")
+library(tidyverse)
+library(NHANES)
+```
+
+# Instructions
+
+1. Open the file `report3_clean_data.R` and look at the code. Where is the data located? Where is this .R file that we source located?
+2. Knit this file. Where does the output file go?
+3. Where do the figures go?
+4. Where is the output data?
+5. Open the file `report3_clean_data.R` and run the code. What happens and why?
+
+# NHANES Data
+
+## Data Info
+
+The NHANES data is a subset of the larger [CDC NHANES survey data](https://wwwn.cdc.gov/nchs/nhanes/) found in the R package [`NHANES`](https://cran.r-project.org/web/packages/NHANES/index.html).
+
+```{r data_clean}
+# Source an R file in the same folder to load and clean up the data a little bit.
+source("report3_clean_data.R")
+```
+
+After filtering by age (< 18 years old) and removing subjects with missing BMI, there are `r nrow(nhanes_kids)` children study participants.
+
+
+# Visualizations
+
+Here we use `ggplot2` package to plot BMI by physical activity status, stratified by gender.
+
+```{r physactive_bmi_gender_boxplot}
+ggplot(nhanes_kids, aes(x = PhysActive, y = BMI, fill = Gender)) + geom_boxplot()
+```
+
+```{r}
+# save filtered data
+# create output folder first
+fs::dir_create("../report3-output/")
+# save as csv file
+write_csv(nhanes_kids, path="../report3-output/nhanes_kids.csv")
+```
+
+

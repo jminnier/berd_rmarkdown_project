@@ -1,0 +1,69 @@
+---
+title: "Report 1"
+author: "Your Name Here"
+date: "July 18, 2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.path = "figs/")
+```
+
+
+
+# This is a section header
+
+## Sub-section header
+
+A shortcut to add a new r chunk is 
+
+- on a Mac: cmd-opt-i
+- on a PC: 
+
+# To Do
+
+1. Try compiling this document using the "Knit" button. What files are produced?
+2. Edit the output to be "pdf_document" and recompile. What files are produced?
+3. Edit the output to be "word_document" and recompile. What files are produced?
+
+4. Explore this code chunk:
+
+```{r}
+x = rnorm(100)
+hist(x)
+```
+
+5. We can add a name to our chunk. What does this do?
+
+```{r histonorm}
+x = rnorm(100)
+hist(x)
+```
+
+6. Look at the chunk options below. The go after the chunk name and a comma. What does changing fig.height= something else do?
+
+```{r smallfig, fig.height=2}
+x = rnorm(100)
+hist(x)
+```
+
+7. Add a chunk option of echo=FALSE and see what happens. Note that the global option was set in the first setup chunk to have echo=TRUE.
+
+```{r, echo=TRUE}
+x = rnorm(100)
+hist(x)
+```
+
+8. Uncomment this code and recompile the document. Then add a chunk command cache=TRUE and recompile. What files are created? Try compiling one more time. 
+
+```{r longtime, cache=TRUE}
+#Sys.sleep(10)
+```
