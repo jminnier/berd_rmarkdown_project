@@ -1,5 +1,7 @@
 ---
-title: 'Example: Files all in same folder as .Rproj'
+title: 'Example: Report2 as a presentation'
+author: 'Your name here'
+date: "`r Sys.Date()`"
 output: html_document
 ---
 
@@ -7,18 +9,19 @@ output: html_document
 knitr::opts_chunk$set(
   echo = TRUE,
   warning = FALSE,
-  message = FALSE,
-  fig.path = "figs/")
+  message = FALSE)
 library(tidyverse)
 library(NHANES)
+library(xaringan)
 ```
 
 # Instructions
 
-1. Open the file `report2_clean_data.R` and look at the code. Where is the data located? Where is this .R file that we source located?
-2. Knit this file. Where does the output file go?
-3. Where do the figures go?
-4. Where is the output data?
+1. Knit the document.
+2. Change the output type to ioslides_presentation and knit. How are the new slides created?
+3. Change the output type to slidy_presentation and knit.
+4. Change the output type to xaringan::moon_reader and knit. What happened to the slides?
+5. Try changing the output type to powerpoint_presentation. If you have powerpoint installed this should work ok.
 
 # NHANES Data
 
@@ -42,9 +45,5 @@ Here we use `ggplot2` package to plot BMI by physical activity status, stratifie
 ggplot(nhanes_adult, aes(x = PhysActive, y = BMI, fill = Gender)) + geom_boxplot()
 ```
 
-```{r}
-# save filtered data
-write_csv(nhanes_adult, path="report2-output/nhanes_adult.csv")
-```
 
 

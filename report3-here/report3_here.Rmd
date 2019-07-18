@@ -1,5 +1,5 @@
 ---
-title: 'Example: Files in subfolder from main .Rproj folder'
+title: 'Example: Files in subfolder from main .Rproj folder - with here()'
 output: html_document
 ---
 
@@ -8,7 +8,7 @@ knitr::opts_chunk$set(
   echo = TRUE,
   warning = FALSE,
   message = FALSE,
-  fig.path = "report3-figs/")
+  fig.path = here::here("figs","report3-here/"))
 library(tidyverse)
 library(NHANES)
 ```
@@ -55,9 +55,9 @@ ggplot(nhanes_kids, aes(x = PhysActive, y = BMI, fill = Gender)) + geom_boxplot(
 ```{r}
 # save filtered data
 # create output folder first
-fs::dir_create(here::here("report3-output-here"))
+fs::dir_create(here::here("output"))
 # save as csv file
-write_csv(nhanes_kids, path=here::here("report3-output-here","nhanes_kids_here.csv"))
+write_csv(nhanes_kids, path=here::here("output","nhanes_kids_here.csv"))
 ```
 
 
