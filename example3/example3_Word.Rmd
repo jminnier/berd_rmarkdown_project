@@ -5,6 +5,7 @@ date: "`r Sys.Date()`"
 output:
   word_document:
     toc: yes
+    reference_docx: word-styles-reference.docx
 ---
 
 ```{r setup, include=FALSE}
