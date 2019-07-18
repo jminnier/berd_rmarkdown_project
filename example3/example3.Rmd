@@ -1,0 +1,95 @@
+---
+title: "Data summary"
+author: "OCTRI-BERD Workshop"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    number_sections: yes
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: no
+    theme: cerulean
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      wanrning = FALSE,
+                      message = FALSE)
+```
+
+
+```{r echo = TRUE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+__Data__: Fisher's (or Anderson's) Iris data set. 
+
+# Petal Widths
+
+## Figure
+
+Scatterplot of petal widths vs. length by species type
+
+```{r Petal_WidthVsHeight, echo=FALSE, fig.width=7, fig.height=3}
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width, 
+                 color = Species)) +
+  geom_point()
+```
+
+
+## Summary statistics
+
+The following table summarizes petal widths by species type:
+
+### Raw table
+
+```{r}
+table_petal_width <- iris %>% 
+  group_by(Species) %>% 
+  summarize(mean = mean(Petal.Width),
+            SD = sd(Petal.Width),
+            median = median(Petal.Width))
+
+table_petal_width
+```
+
+### Simple table
+
+
+```{r}
+kable(table_petal_width, digits=1)
+```
+
+### Somewhat better
+
+```{r}
+kable(table_petal_width, digits=1, format = "markdown")
+```
+
+### Even better
+
+```{r}
+kable(table_petal_width, digits=1) %>%
+  kable_styling(bootstrap_options = c("striped")) %>%
+  add_header_above(c(" ", "Petal Width^1^" = 3)) %>%
+  footnote(number = c("n = 50 for each species")) 
+```
+
+### If you're already done...
+
+```{r}
+kable(table_petal_width, digits=1) %>%
+  kable_styling(bootstrap_options = c("striped"), full_width = F, position = "float_right") %>%
+  add_header_above(c(" ", "Petal Width^1^" = 3)) %>%
+  footnote(number = c("n = 50 for each species")) %>% 
+  column_spec(1, bold = TRUE, border_right = TRUE) %>% 
+  row_spec(1, color = "red")
+  
+```
+Use code from https://haozhu233.github.io/kableExtra/awesome_table_in_html.html to figure out how to make the table to the right.
+
+

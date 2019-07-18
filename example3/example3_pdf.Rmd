@@ -1,0 +1,57 @@
+---
+title: "Data summary"
+author: "OCTRI-BERD Workshop"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      wanrning = FALSE,
+                      message = FALSE)
+```
+
+
+```{r echo = TRUE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+__Data__: Fisher's (or Anderson's) Iris data set. 
+
+# Petal Widths
+
+## Figure
+
+Scatterplot of petal widths vs. length by species type
+
+```{r Petal_WidthVsHeight, echo=FALSE, fig.width=7, fig.height=3}
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width, 
+                 color = Species)) +
+  geom_point()
+```
+
+
+\pagebreak
+
+## Summary statistics
+
+The following table summarizes petal widths by species type:
+
+```{r}
+table_petal_width <- iris %>% 
+  group_by(Species) %>% 
+  summarize(mean = mean(Petal.Width),
+            SD = sd(Petal.Width),
+            median = median(Petal.Width))
+```
+
+```{r}
+kable(table_petal_width, digits=1) %>%
+  kable_styling(bootstrap_options = c("striped")) %>%
+  add_header_above(c(" ", "Petal Width" = 3)) %>%
+  footnote(number = c("n = 50 for each species")) 
+```

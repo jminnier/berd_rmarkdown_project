@@ -1,0 +1,47 @@
+---
+title: "Example 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+To-do list
+
+# Shopping list
+
+## Farmers' market
+
+(@) __Fruit__
+  * raspberries
+  * marionberries
+(@) __Veggies__
+    * lettuce
+    * tomatoes
+
+## Grocery store
+
+1. milk
+1. eggs
+1. _baking stuff_
+  * ~~flour~~
+  * sugar
+
+*** 
+
+# Recipe
+
+>Mix the following: 
+
+1 cup milk  
+$\frac{1}{2}$ Tbsp sugar
+
+Add 2 cups berries.  
+Let sit 30 min and serve.
+
+`Enjoy!`
+
+
+
+
