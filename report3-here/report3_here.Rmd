@@ -53,8 +53,6 @@ ggplot(nhanes_kids, aes(x = PhysActive, y = BMI, fill = Gender)) + geom_boxplot(
 
 ```{r}
 # save filtered data
-# create output folder first
-fs::dir_create(here::here("output"))
 # save as csv file
 write_csv(nhanes_kids, path=here::here("output","nhanes_kids_here.csv"))
 ```

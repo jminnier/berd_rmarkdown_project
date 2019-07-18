@@ -43,7 +43,7 @@ ggplot(nhanes_adult, aes(x = PhysActive, y = BMI, fill = Gender)) + geom_boxplot
 
 ```{r}
 # save filtered data
-write_csv(nhanes_adult, path="report2-output/nhanes_adult.csv")
+write_csv(nhanes_adult, path="output/nhanes_adult.csv")
 ```
 
 
