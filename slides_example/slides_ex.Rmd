@@ -3,14 +3,13 @@ title: "Gapminder Report"
 author: "Your Name"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: default
-  html_document: default
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(gapminder)
-library(naniar)
 library(tidyverse)
 ```
 

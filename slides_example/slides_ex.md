@@ -1,8 +1,8 @@
 ---
 title: "Gapminder Report"
 author: "Your Name"
-date: "2019-07-16"
-output: 
+date: "2019-07-18"
+output:
   html_document:
     keep_md: true
 ---
@@ -10,6 +10,8 @@ output:
 
 
 # Background
+
+## Summary
 
 This is an analysis of the gapminder data set with 1704 observations.
 
