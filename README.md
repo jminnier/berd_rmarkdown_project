@@ -17,4 +17,4 @@ Run the code in `00-install.R` by clicking on the file within Rstudio and clicki
 
 # Solutions
 
-Some solutions to exercises can be found in the [solns][solns/] folder.
+Some solutions to exercises can be found in the [solns](solns/) folder.
