@@ -9,6 +9,8 @@ R project to use during R Markdown BERD workshop [Reproducible Reports with R Ma
 
 Download this folder as a zip file at this link: [https://github.com/jminnier/berd_rmarkdown_project/archive/master.zip](https://github.com/jminnier/berd_rmarkdown_project/archive/master.zip)
 
-Unzip this folder and open the `berd_rmarkdown_project.Rproj`. This will open an instance of Rstudio with this folder as the working directory.
+Unzip/uncompress the downloaded folder (very important for PC).
+
+Open the `berd_rmarkdown_project.Rproj`. This will open an instance of Rstudio with this folder as the working directory.
 
 Run the code in `00-install.R` by clicking on the file within Rstudio and clicking "Run".
