@@ -1,0 +1,37 @@
+---
+title: "Data summary"
+output: html_document
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{r echo = TRUE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+
+
+```{r Petal_WidthVsHeight, echo=FALSE, fig.width=7, fig.height=3}
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width, 
+                 color = Species)) +
+  geom_point()
+```
+
+
+
+```{r}
+table_petal_width <- iris %>% 
+  group_by(Species) %>% 
+  summarize(mean = mean(Petal.Width),
+            SD = sd(Petal.Width),
+            median = median(Petal.Width))
+```
+

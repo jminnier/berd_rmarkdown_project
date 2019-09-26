@@ -42,10 +42,6 @@ Let sit 30 min and serve.
 
 `Enjoy!`
 
-```{r}
-summary(iris)
-```
-
 
 
 

@@ -14,10 +14,11 @@ library(tidyverse)
 
 # Instructions
 
-1. Open the file `report2_clean_data.R` and look at the code. Where is the data located? Where is this .R file that we source located?
-2. Knit this file. Where does the output file go?
+1. Look at the chunk labeled data_clean below. Where is the data located in relation to this .Rmd file and to your project folder?
+2. Knit this file. The file creates an output file with filtered data. Where does the output file go?
 3. Where do the figures go?
-4. Where is the output data?
+5. Change the code in `data_clean` chunk to read in the data from `berd_rmarkdown_project/data/nhanes_data_females.csv`.
+6. Change the code in `save_data` chunk to save the output file in `berd_rmarkdown_project/output/`.
 
 # NHANES Data
 
@@ -26,12 +27,14 @@ library(tidyverse)
 The NHANES data is a subset of the larger [CDC NHANES survey data](https://wwwn.cdc.gov/nchs/nhanes/) found in the R package [`NHANES`](https://cran.r-project.org/web/packages/NHANES/index.html).
 
 ```{r data_clean}
-# Source an R file in the same folder to load and clean up the data a little bit.
-source("report2_clean_data.R")
+# load the data
+nhanes_data <- read_csv("example4_nhanes_data.csv")
+
+# filter data to study only adults with BMI values
+nhanes_adult <- nhanes_data %>% drop_na(BMI) %>% filter(Age >= 20)
 ```
 
 After filtering by age (>=20 years old for valid BMI measurements) and removing subjects with missing BMI, there are `r nrow(nhanes_adult)` study participants.
-
 
 # Visualizations
 
@@ -41,9 +44,19 @@ Here we use `ggplot2` package to plot BMI by physical activity status, stratifie
 ggplot(nhanes_adult, aes(x = PhysActive, y = BMI, fill = Gender)) + geom_boxplot()
 ```
 
-```{r}
+# Save the output
+
+```{r save_data}
 # save filtered data
 write_csv(nhanes_adult, path="output/nhanes_adult.csv")
 ```
 
+
+# Here
+
+What is the here::here() location?
+
+```{r}
+here::here()
+```
 
