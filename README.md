@@ -14,3 +14,7 @@ Unzip/uncompress the downloaded folder (very important for PC).
 Open the `berd_rmarkdown_project.Rproj`. This will open an instance of Rstudio with this folder as the working directory.
 
 Run the code in `00-install.R` by clicking on the file within Rstudio and clicking "Run".
+
+# Solutions
+
+Some solutions to exercises can be found in the [solns](solns/) folder.
