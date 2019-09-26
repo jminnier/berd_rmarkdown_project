@@ -19,8 +19,12 @@ library(kableExtra)
 
 
 
-```{r Petal_WidthVsHeight, echo=FALSE, fig.width=7, fig.height=3}
-ggplot(iris, aes(x = Petal.Length, y = Petal.Width, 
+```{r Sepal_WidthVsHeight, echo=FALSE, fig.width=7, fig.height=3}
+#-------------------
+# UPDATE this code
+#-------------------
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, 
                  color = Species)) +
   geom_point()
 ```
@@ -28,10 +32,14 @@ ggplot(iris, aes(x = Petal.Length, y = Petal.Width,
 
 
 ```{r}
-table_petal_width <- iris %>% 
+#-------------------
+# UPDATE this code
+#-------------------
+
+table_sepal_width <- iris %>% 
   group_by(Species) %>% 
-  summarize(mean = mean(Petal.Width),
-            SD = sd(Petal.Width),
-            median = median(Petal.Width))
+  summarize(mean = mean(Sepal.Width),
+            SD = sd(Sepal.Width),
+            median = median(Sepal.Width))
 ```
 

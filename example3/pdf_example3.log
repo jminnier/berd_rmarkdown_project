@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 JUL 2019 13:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  26 SEP 2019 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**example3_pdf.tex
-(./example3_pdf.tex
+**pdf_example3.tex
+(./pdf_example3.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -652,8 +652,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (./example3_pdf.aux)
-\openout1 = `example3_pdf.aux'.
+) (./pdf_example3.aux)
+\openout1 = `pdf_example3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
 LaTeX Font Info:    ... okay on input line 142.
@@ -742,9 +742,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 142.
 LaTeX Info: Redefining \pageref on input line 142.
 LaTeX Info: Redefining \nameref on input line 142.
-(./example3_pdf.out) (./example3_pdf.out)
+(./pdf_example3.out) (./pdf_example3.out)
 \@outlinefile=\write4
-\openout4 = `example3_pdf.out'.
+\openout4 = `pdf_example3.out'.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -773,7 +773,7 @@ G,.JBIG2,.JB2,.eps]
 (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-)) (./example3_pdf.toc
+)) (./pdf_example3.toc
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -809,7 +809,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ))
 \tf@toc=\write5
-\openout5 = `example3_pdf.toc'.
+\openout5 = `pdf_example3.toc'.
 
 
 Package xcolor Warning: Incompatible color definition on input line 149.
@@ -827,31 +827,31 @@ Package xcolor Warning: Incompatible color definition on input line 155.
 
 Package xcolor Warning: Incompatible color definition on input line 155.
 
-<example3_pdf_files/figure-latex/Petal_WidthVsHeight-1.pdf, id=19, 489.83pt x 2
+<pdf_example3_files/figure-latex/Petal_WidthVsHeight-1.pdf, id=19, 489.83pt x 2
 06.7725pt>
-File: example3_pdf_files/figure-latex/Petal_WidthVsHeight-1.pdf Graphic file (t
+File: pdf_example3_files/figure-latex/Petal_WidthVsHeight-1.pdf Graphic file (t
 ype pdf)
-<use example3_pdf_files/figure-latex/Petal_WidthVsHeight-1.pdf>
-Package pdftex.def Info: example3_pdf_files/figure-latex/Petal_WidthVsHeight-1.
-pdf  used on input line 167.
+<use pdf_example3_files/figure-latex/Petal_WidthVsHeight-1.pdf>
+Package pdftex.def Info: pdf_example3_files/figure-latex/Petal_WidthVsHeight-1.
+pdf  used on input line 165.
 (pdftex.def)             Requested size: 469.76805pt x 198.30371pt.
 [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./examp
-le3_pdf_files/figure-latex/Petal_WidthVsHeight-1.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./pdf_e
+xample3_files/figure-latex/Petal_WidthVsHeight-1.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
-(./example3_pdf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
-Package rerunfilecheck Info: File `example3_pdf.out' has not changed.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
+(./pdf_example3.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
+Package rerunfilecheck Info: File `pdf_example3.out' has not changed.
 (rerunfilecheck)             Checksum: 9419659366D7996C055F094A17DDB7E2;338.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 14334 strings out of 492649
- 208463 string characters out of 6129622
+ 14331 strings out of 492649
+ 208427 string characters out of 6129622
  326307 words of memory out of 5000000
  17955 multiletter control sequences out of 15000+600000
  46421 words of font info for 51 fonts, out of 8000000 for 9000
@@ -865,10 +865,10 @@ ype1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 /lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri12.p
 fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/l
 ocal/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on example3_pdf.pdf (2 pages, 189415 bytes).
+Output written on pdf_example3.pdf (2 pages, 189157 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 77 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  8222 words of extra memory for PDF output out of 10000 (max. 10000000)
 

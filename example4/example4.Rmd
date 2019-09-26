@@ -1,5 +1,5 @@
 ---
-title: 'Example: Files all in same folder as .Rproj'
+title: 'Example: Files all in same folder'
 output: html_document
 ---
 

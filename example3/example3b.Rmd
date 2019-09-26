@@ -1,13 +1,21 @@
 ---
 title: "Data summary"
-output: html_document
-editor_options: 
-  chunk_output_type: console
+author: "OCTRI-BERD Workshop"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    number_sections: yes
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: no
+    theme: cerulean
+    code_folding: show
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
-                      warning = FALSE,
+                      wanrning = FALSE,
                       message = FALSE)
 ```
 
@@ -22,7 +30,7 @@ __Data__: Fisher's (or Anderson's) Iris data set.
 
 # Petal Widths
 
-## Figuree
+## Figure
 
 Scatterplot of petal widths vs. length by species type
 
@@ -52,19 +60,19 @@ table_petal_width
 ### Simple table
 
 
-```{r}
+```{r echo = TRUE}
 kable(table_petal_width, digits=1)
 ```
 
 ### Somewhat better
 
-```{r}
+```{r echo = TRUE}
 kable(table_petal_width, digits=1, format = "markdown")
 ```
 
 ### Even better
 
-```{r}
+```{r echo = TRUE}
 kable(table_petal_width, digits=1) %>%
   kable_styling(bootstrap_options = c("striped")) %>%
   add_header_above(c(" ", "Petal Width^1^" = 3)) %>%
@@ -73,7 +81,7 @@ kable(table_petal_width, digits=1) %>%
 
 ### If you're already done...
 
-```{r}
+```{r echo = TRUE}
 kable(table_petal_width, digits=1) %>%
   kable_styling(bootstrap_options = c("striped"), full_width = F, position = "float_right") %>%
   add_header_above(c(" ", "Petal Width^1^" = 3)) %>%

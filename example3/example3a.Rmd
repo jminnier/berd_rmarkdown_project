@@ -3,12 +3,8 @@ title: "Data summary"
 author: "OCTRI-BERD Workshop"
 date: "`r Sys.Date()`"
 output:
-  word_document:
-    toc: yes
   html_document:
-    code_folding: show
     number_sections: yes
-    theme: cerulean
     toc: yes
     toc_float:
       collapsed: yes
